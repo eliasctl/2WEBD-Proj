@@ -3,9 +3,13 @@ import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Error from "./components/Error";
 
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
-import Departments from "./pages/Departments";
+import DepartmentsPage from "./pages/DepartmentsPages";
 import Home from "./pages/Home";
+import { ArtworksCardsList } from "./components/ArtworksCardsList";
+import ArtworkPage from "./pages/ArtworkPage";
+
 
 const rooter = createBrowserRouter([
   {
@@ -22,14 +26,21 @@ const rooter = createBrowserRouter([
       <>
         <Navbar />
         <Outlet />
+        <Footer />
       </>
     ),
     children: [
       {
         path: "/",
-        element: (<Home/>),
+        element: (
+          <>
+            <Home />
+            <ArtworksCardsList />
+          </>
+        ),
       },
-      { path: "/Departments", element: (<Departments/>) },
+      { path: "/Departments", element: <DepartmentsPage /> },
+      { path: "/Artwork/:id", element: <ArtworkPage />}
     ],
   },
 ]);

@@ -5,7 +5,7 @@ export interface Departments {
 
 // William interface
 
-export interface ArtworkData {
+export interface Artwork {
   objectID: number;
   isHighlight: boolean;
   accessionNumber: string;

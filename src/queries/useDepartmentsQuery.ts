@@ -1,7 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { Departments } from "./types";
-
-const baseUrl = "https://collectionapi.metmuseum.org/public/collection/v1";
+import { Departments } from "../types";
+import { baseUrl } from "../conf";
 
 export function useDepartmentsQuery() {
     return useQuery({
