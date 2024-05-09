@@ -78,6 +78,12 @@ Pour unstaller et lancer le projet
 - Preline
 - Fontawsome
 
+## Tests
+
+- npx playwright test --update-snapshots [Pour réinitialiser les captures d'écrans]
+- npx playwright test
+- npx playwright show-report
+
 ## Auteurs
 
 - [Elias CASTEL MOUSSA](http://github.com/eliasctl)
