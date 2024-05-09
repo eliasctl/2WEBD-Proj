@@ -3,8 +3,6 @@ export interface Departments {
   displayName: string;
 }
 
-// William interface
-
 export interface Artwork {
   objectID: number;
   isHighlight: boolean;

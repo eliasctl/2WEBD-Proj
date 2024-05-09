@@ -34,7 +34,7 @@ export default function Home() {
                 className="inline-flex items-center gap-x-1 font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200"
                 to="#"
               >
-                Rechercher une oeuvre
+                Search for a work of art
                 <FontAwesomeIcon icon={fas.faChevronRight} />
               </Link>
             </p>

@@ -5,11 +5,10 @@ import Error from "./components/Error";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-import DepartmentsPage from "./pages/DepartmentsPages";
 import Home from "./pages/Home";
-import { ArtworksCardsList } from "./components/ArtworksCardsList";
+import DepartmentsPage from "./pages/DepartmentsPage";
+import ArtworksCardsList from "./components/ArtworksCardsList";
 import ArtworkPage from "./pages/ArtworkPage";
-
 
 const rooter = createBrowserRouter([
   {
