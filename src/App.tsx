@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import DepartmentsPage from "./pages/DepartmentsPage";
+import DepartmentPage from "./pages/DepartmentPage";
 import ArtworksCardsList from "./components/ArtworksCardsList";
 import ArtworkPage from "./pages/ArtworkPage";
 
@@ -39,6 +40,7 @@ const rooter = createBrowserRouter([
         ),
       },
       { path: "/Departments", element: <DepartmentsPage /> },
+      { path: "/Department/:id", element: <DepartmentPage /> },
       { path: "/Artwork/:id", element: <ArtworkPage />}
     ],
   },
