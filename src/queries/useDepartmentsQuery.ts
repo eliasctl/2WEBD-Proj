@@ -12,14 +12,3 @@ export function useDepartmentsQuery() {
         },
     })
 }
-
-export function useDepartmentQuery(departmentId: number) {
-    return useQuery({
-        queryKey: ["department", departmentId],
-        queryFn: async () => {
-            const response = await fetch(`${baseUrl}/objects?departmentIds=${departmentId}`);
-            const department = await response.json();
-            return department;
-        },
-    })
-}

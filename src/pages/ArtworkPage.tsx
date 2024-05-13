@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import Error from "../components/Error";
-import { useArtworkDetailQuery } from "../queries/userArtworkDetailQuery";
+import { useArtworkDetailQuery } from "../queries/useArtworkDetailQuery";
 
 export default function ArtworkPage() {
   const { id } = useParams();
@@ -67,10 +67,10 @@ export default function ArtworkPage() {
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:gap-12">
             <img
-              alt="La Nuit Étoilée"
+              alt={artwork.title}
               className="aspect-[4/3] w-full rounded-lg object-scale-down"
               height={600}
-              src={artwork.primaryImage}
+              src={artwork.primaryImage? artwork.primaryImage : "/placeholder.svg"}
               width={800}
             />
             <div className="grid gap-4">

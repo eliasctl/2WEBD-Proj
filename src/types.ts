@@ -3,6 +3,11 @@ export interface Departments {
   displayName: string;
 }
 
+export interface Artworks {
+  total: number;
+  objectIDs: number[];
+}
+
 export interface Artwork {
   objectID: number;
   isHighlight: boolean;

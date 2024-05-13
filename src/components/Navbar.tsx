@@ -67,7 +67,7 @@ export default function Navbar() {
               </Link>
               <Link
                 className="font-semibold text-gray-500 hover:text-gray-400 sm:py-6"
-                to="/"
+                to="/Search"
                 aria-current="page"
               >
                 Search <FontAwesomeIcon icon={fas.faMagnifyingGlass} />

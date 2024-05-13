@@ -1,4 +1,5 @@
 import { Departments } from "../types";
+import { Link } from "react-router-dom";
 
 interface DepartmentProps {
   department: Departments;
@@ -8,9 +9,9 @@ export default function DepartmentCard(props: DepartmentProps) {
   const { department } = props;
 
   return (
-    <a
+    <Link
       className="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition"
-      href="#"
+      to={"/Department/" + department.departmentId}
     >
       <div className="p-4 md:p-5">
         <div className="flex justify-between items-center">
@@ -34,6 +35,6 @@ export default function DepartmentCard(props: DepartmentProps) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }

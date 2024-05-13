@@ -7,8 +7,8 @@ export function useArtworksHighlightQuery() {
         queryKey: ["artworksHighlight"],
         queryFn: async () => {
             const response = await fetch(`${baseUrl}/search?q=&isHighlight=1`);
-            const departments = await response.json();
-            return departments["departments"] as Departments[];
+            const artworksHighlight = await response.json();
+            return artworksHighlight["departments"] as Departments[];
         },
     })
 }
