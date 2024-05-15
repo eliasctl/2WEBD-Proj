@@ -11,6 +11,7 @@ import DepartmentsPage from "./pages/DepartmentsPage";
 import DepartmentPage from "./pages/DepartmentPage";
 import ArtworksCardsList from "./components/ArtworksCardsListHighlight";
 import ArtworkPage from "./pages/ArtworkPage";
+import TestSearch from "./components/TestSearch";
 
 const rooter = createBrowserRouter([
   {
@@ -35,6 +36,7 @@ const rooter = createBrowserRouter([
         path: "/",
         element: (
           <>
+            <TestSearch />
             <Home />
             <ArtworksCardsList />
           </>
