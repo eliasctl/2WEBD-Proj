@@ -1,88 +1,49 @@
-# A AJOUTER
-
-Dans le projet du day 2 :
-Affichage des stats apres cliquage sur le back puis dépliage
-Navbar avec fonction de recherche
-
 # Projet :
 
-Ce projet est réalisé dans le cadre du cours de Supinfo.
+Ce projet est réalisé dans le cadre du cours de Réact de Supinfo Paris BenG2 2023-2024.
+Il s'agit d'un site destiné aux étudiants et chercheurs en art qui leur permet de rechercher des œuvres d'art du Metropolitan Museum of Art (MET), nous l'avons nomé e-Met.
 
-## Installation
-
-Utilisation de [node.js](https://nodejs.org/).
-
-Dans le terminal :
-
-- Aller dans le dossier du projet que vous voulez lancer par exemple :
-  cd .\day-1\
-  cd .\day-2\
-
-- Installer les fichier du projet :
-  npm install
-
-- Lancer le projet :
-  npm run dev
-
-### A NE PAS FAIRE
-
-- -5 points
-
-    - PAS DE DOUBLES EGAL == ❌
-
-    - PAS DE COMPARAISON : !== ❌
-
-    - PAS DE VAR ❌
-
-    - PAS DE SWITCH ❌
-
-    - PAS D'ERREUR DANS LA CONSOLE ❌
-
-    - PAS DE BALISE "a" => BALISE "Link" ❌
-
-### Fichiers
-
-- nodes_modules
-    - {LesNodesModules}
-- src
-    - assets
-        - [Tous les fichiers statiques pour affichage]
-    - components
-        - [MonComposant].tsx
-    - pages
-        - [MaPage].tsx
-    - queries
-        - [MesRequêtes].tsx
-    - App.tsx
-    - index.css
-    - main.tsx
-- package.json
-
-### A faire :
-
-Faire un code importé dans chaque fichier qui va vérifier s'il y a un double égal dans le code et envoie une erreur s'il y en a un.
+![Screen de la page d'accueil avec le MET en fond](https://cdn.sanity.io/images/cctd4ker/production/b8a5e07c166342e1c7f6fe30b8c45d64fea69ea5-4096x2326.jpg?w=3840&q=75&fit=clip&auto=format "website E-MET Home Screen")
 
 ## Installation & lancement
 
-Pour unstaller et lancer le projet
+Pour unstaller et lancer le projet [vous devez obligatoirement être connecter à internet]
 
 ```bash
-  npm i
-  npm run dev
+  npm i # Pour effectuer l'installation du projet (à éxécuter pour l'installation ou lors de chaque montée de version)
+  npm run dev # Pour executer le projet ('ctl' + 'c' pour l'arrêter)
 ```
 
-## Notes
+## Fichiers
 
-- ShadCN
-- TailWind
-- Preline
-- Fontawsome
+- nodes_modules
+  - {LesNodesModules}
+- src
+  - assets
+      - [Tous les fichiers statiques pour affichage]
+  - components
+      - [MonComposant].tsx
+      - ui
+        - [composantShadcn].tsx
+  - pages
+      - [UnePage].tsx
+  - queries
+      - [UneRequête].tsx
+  - App.tsx
+  - index.css
+  - main.tsx
+- tests
+  - [unTest].spec.ts
+- package.json
+- index.html
+- [D'autres fichiers de configuration]
 
 ## Tests
 
 - npx playwright test --update-snapshots [Pour réinitialiser les captures d'écrans]
-- npx playwright test
-- npx playwright show-report
+- npx playwright test [Pour effectuer les tests]
+- npx playwright show-report [Pour voir le résultat des tests]
+- 'ctl' + 'c' [Pour arrêter la visualisation  des résultats des tests]
 
 ## Auteurs
 

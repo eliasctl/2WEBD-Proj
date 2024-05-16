@@ -4,7 +4,6 @@ import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import Select from "react-select";
 import { GroupBase } from "react-select";
 import { useDepartmentsQuery } from "@/queries/useDepartmentsQuery";
-import { useArtworksSearchQuery } from "@/queries/useArtworksSearchQuery";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,8 +11,9 @@ import {
   PopoverContent,
   Popover,
 } from "@/components/ui/popover";
+import SearchResultDisplay from "@/components/SearchResultDisplay";
 
-export default function TestSearch() {
+export default function Search() {
   const [selectedFirstYear, setSelectedFirstYear] = useState<number>(
     new Date().getFullYear()
   );
@@ -26,6 +26,20 @@ export default function TestSearch() {
   const [pageSecondYear, setPageSecondYear] = useState<number>(
     new Date().getFullYear() - 4
   );
+
+  const [search, setSearch] = useState<string>("");
+
+  const [searchQuery, setSearchQuery] = useState("");
+  const [departmentQuery, setDepartmentQuery] = useState(0);
+  const [firstYearQuery, setFirstYearQuery] = useState(
+    new Date().getFullYear()
+  );
+  const [secondYearQuery, setSecondYearQuery] = useState(
+    new Date().getFullYear()
+  );
+  const [highlightQuery, setHighlightQuery] = useState(false);
+  const [imageQuery, setImageQuery] = useState(false);
+  const [geoLocationQuery, setGeoLocationQuery] = useState("");
 
   const [selectedDepartmentID, setSelectedDepartmentID] = useState(0);
   const [selectedDepartment, setSelectedDepartment] = useState("");
@@ -71,8 +85,6 @@ export default function TestSearch() {
       </>
     );
   }
-
-  console.log(departments);
 
   const options = departments.map((department) => ({
     value: department.departmentId,
@@ -170,17 +182,13 @@ export default function TestSearch() {
       "geoLocation"
     ) as HTMLInputElement;
 
-    console.log("Search artworks");
-
-    console.log({
-      search: search.value,
-      department: department,
-      startYear: startYear,
-      endYear: endYear,
-      highlight: highlight.checked,
-      asImage: asImage.checked,
-      geoLocation: geoLocation.value,
-    });
+    setSearchQuery(search.value);
+    setDepartmentQuery(department);
+    setFirstYearQuery(startYear);
+    setSecondYearQuery(endYear);
+    setHighlightQuery(highlight.checked);
+    setImageQuery(asImage.checked);
+    setGeoLocationQuery(geoLocation.value);
   }
 
   return (
@@ -206,6 +214,10 @@ export default function TestSearch() {
                 id="search"
                 className="py-3 pl-10 pr-4 block w-full border border-neutral-900 rounded focus:ring-blue-500"
                 placeholder="Enter your search"
+                value={search}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setSearch(e.target.value)
+                }
               />
             </div>
           </div>
@@ -220,13 +232,15 @@ export default function TestSearch() {
               <Select
                 className="w-full"
                 id="department"
-                options={options as unknown as readonly (string | GroupBase<string>)[]}
+                options={
+                  options as unknown as readonly (string | GroupBase<string>)[]
+                }
                 value={selectedDepartment}
                 onChange={departmentSelectChange}
               />
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             <div>
               <label
                 className="block font-medium text-gray-500 mb-1"
@@ -245,7 +259,10 @@ export default function TestSearch() {
                         icon={fas.faCalendarDays}
                         className="text-gray-400"
                       />
-                      <span>{selectedFirstYear}</span>
+                      <div className="w-32">
+                        <span>{selectedFirstYear}</span>
+                      </div>
+
                       <FontAwesomeIcon
                         icon={fas.faChevronDown}
                         className="text-gray-400"
@@ -319,7 +336,9 @@ export default function TestSearch() {
                         icon={fas.faCalendarDays}
                         className="text-gray-400"
                       />
-                      <span>{selectedSecondYear}</span>
+                      <div className="w-32">
+                        <span>{selectedSecondYear}</span>
+                      </div>
                       <FontAwesomeIcon
                         icon={fas.faChevronDown}
                         className="text-gray-400"
@@ -443,6 +462,17 @@ export default function TestSearch() {
             Search
           </button>
         </div>
+      </div>
+      <div id="searchResultDisplay">
+        <SearchResultDisplay
+          query={searchQuery}
+          departmentId={departmentQuery}
+          dateBegin={firstYearQuery}
+          dateEnd={secondYearQuery}
+          isHighlight={highlightQuery}
+          hasImage={imageQuery}
+          geoLocation={geoLocationQuery}
+        />
       </div>
     </>
   );

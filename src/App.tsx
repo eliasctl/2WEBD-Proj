@@ -6,12 +6,11 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import Search from "./pages/Search";
+import ArtworksHighlight from "./components/ArtworksHighlight";
+import SearchPage from "./pages/SearchPage";
 import DepartmentsPage from "./pages/DepartmentsPage";
 import DepartmentPage from "./pages/DepartmentPage";
-import ArtworksCardsList from "./components/ArtworksCardsListHighlight";
 import ArtworkPage from "./pages/ArtworkPage";
-import TestSearch from "./components/TestSearch";
 
 const rooter = createBrowserRouter([
   {
@@ -25,24 +24,23 @@ const rooter = createBrowserRouter([
       />
     ),
     element: (
-      <>
+      <div className="select-none cursor-default">
         <Navbar />
         <Outlet />
         <Footer />
-      </>
+      </div>
     ),
     children: [
       {
         path: "/",
         element: (
           <>
-            <TestSearch />
             <Home />
-            <ArtworksCardsList />
+            <ArtworksHighlight />
           </>
-        ),
+        )
       },
-      { path: "/Search", element: <Search /> },
+      { path: "/Search", element: <SearchPage />},
       { path: "/Departments", element: <DepartmentsPage /> },
       { path: "/Department/:id", element: <DepartmentPage /> },
       { path: "/Artwork/:id", element: <ArtworkPage />}

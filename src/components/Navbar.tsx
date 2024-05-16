@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@awesome.me/kit-b1390146c4/icons";
+import SearchComponent from "./SearchComponent";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -59,6 +60,7 @@ export default function Navbar() {
             } overflow-hidden transition-all duration-300 basis-full grow sm:block`}
           >
             <div className="flex flex-col gap-y-4 gap-x-0 mt-5 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:mt-0 sm:ps-7">
+              <SearchComponent />
               <Link
                 className="font-semibold text-gray-500 hover:text-gray-400 sm:py-6"
                 to="/Departments"
