@@ -3,7 +3,7 @@
 Ce projet est réalisé dans le cadre du cours de Réact de Supinfo Paris BenG2 2023-2024.
 Il s'agit d'un site destiné aux étudiants et chercheurs en art qui leur permet de rechercher des œuvres d'art du Metropolitan Museum of Art (MET), nous l'avons nomé e-Met.
 
-![Screen de la page d'accueil avec le MET en fond](https://cdn.sanity.io/images/cctd4ker/production/b8a5e07c166342e1c7f6fe30b8c45d64fea69ea5-4096x2326.jpg?w=3840&q=75&fit=clip&auto=format "website E-MET Home Screen")
+![Screen de la page d'accueil avec le MET en fond](https://github.com/eliasctl/2WEBD-Proj/blob/main/public/websiteHomeScreen.png?raw=true "website E-MET Home Screen")
 
 ## Installation & lancement
 
