@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <div className="max-w-6xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        <div className="min-h-[35vh] md:min-h-[75vh] bg-[url('/metmuseumny.jpg')] bg-center bg-cover bg-no-repeat relative rounded-xl">
+        <div className="min-h-[35vh] md:min-h-[75vh] bg-[url('/met-NY.jpg')] bg-center bg-cover bg-no-repeat relative rounded-xl">
           <div className="absolute bottom-0 start-0 end-0 max-w-xs text-center mx-auto p-6 md:start-auto md:text-start md:mx-0">
             <div className="px-5 py-4 inline-block bg-white rounded md:p-7">
               <h3 className="text-lg font-bold text-gray-800 sm:text-2xl">

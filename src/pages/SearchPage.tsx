@@ -10,8 +10,8 @@ export default function SearchPage() {
   if (query) {
     return (
       <>
-        <div id="searchResultDisplay">
-          <h1 className="text-center">Result for {query}</h1>
+        <div id="searchResultDisplay" className="pt-5">
+          <div className="text-2xl text-center font-semibold">Result for : <u>{query}</u></div>
           <SearchResultDisplay
             query={query}
             departmentId={0}

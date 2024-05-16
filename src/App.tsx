@@ -40,6 +40,15 @@ const rooter = createBrowserRouter([
           </>
         )
       },
+      {
+        path: "/e-met",
+        element: (
+          <>
+            <Home />
+            <ArtworksHighlight />
+          </>
+        )
+      },
       { path: "/Search", element: <SearchPage />},
       { path: "/Departments", element: <DepartmentsPage /> },
       { path: "/Department/:id", element: <DepartmentPage /> },

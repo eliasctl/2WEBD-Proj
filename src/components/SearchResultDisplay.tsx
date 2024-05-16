@@ -131,7 +131,7 @@ export default function SearchResultDisplay(props: {
           &nbsp;Précédent
         </button>
         <button
-          className={`rounded px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 bg-indigo-600 hover:bg-indigo-500 ${
+          className={`rounded px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 bg-indigo-600 ${
             page === totalPages
               ? "cursor-not-allowed bg-slate-500"
               : "bg-indigo-600 hover:bg-indigo-500"

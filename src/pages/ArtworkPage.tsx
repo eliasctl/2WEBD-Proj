@@ -70,7 +70,7 @@ export default function ArtworkPage() {
               alt={artwork.title}
               className="aspect-[4/3] w-full rounded-lg object-scale-down"
               height={600}
-              src={artwork.primaryImage? artwork.primaryImage : "/placeholder.svg"}
+              src={artwork.primaryImage? artwork.primaryImage : "/placeholderE-MET.svg"}
               width={800}
             />
             <div className="grid gap-4">

@@ -114,7 +114,7 @@ export default function ArtworkCard(props: { artworkId: number }) {
             alt={artwork.title? artwork.title : "Artwork image"}
             className="aspect-square object-cover w-full transition-all group-hover:scale-105"
             height="400"
-            src={artwork.primaryImage? artwork.primaryImage : "/placeholder.svg"}
+            src={artwork.primaryImage? artwork.primaryImage : "/placeholderE-MET.svg"}
             width="400"
           />
           <div className="bg-white p-4">
