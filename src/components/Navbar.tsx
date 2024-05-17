@@ -21,7 +21,7 @@ export default function Navbar() {
             <Link
               className="flex-none text-xl font-semibold"
               to="/"
-              aria-label="Brand"
+              aria-label="E-Met"
             >
               Metropolitan Museum of Art
             </Link>

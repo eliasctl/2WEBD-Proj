@@ -32,7 +32,7 @@ export default function Home() {
             <p className="mt-5">
               <Link
                 className="inline-flex items-center gap-x-1 font-medium text-blue-600 hover:text-blue-700 transition-colors duration-200"
-                to="#"
+                to="/Search"
               >
                 Search for a work of art
                 <FontAwesomeIcon icon={fas.faChevronRight} />
