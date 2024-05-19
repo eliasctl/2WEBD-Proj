@@ -48,3 +48,4 @@ Pour unstaller et lancer le projet [vous devez obligatoirement Ãªtre connecter Ã
 ## Auteurs
 
 - [Elias CASTEL MOUSSA](http://github.com/eliasctl)
+- [Charbel EL KHOUEIRY](https://github.com/Charbelkh1)

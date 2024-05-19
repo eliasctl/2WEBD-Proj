@@ -18,7 +18,7 @@ test("Navbar", async ({ page }) => {
   await page.getByLabel("E-Met").click();
   await page.getByRole("link", { name: "Departments" }).click();
   await page.getByLabel("E-Met").click();
-  await page.getByRole("link", { name: "Search" }).click();
+  await page.getByRole('link', { name: 'Search', exact: true }).click();
   await page.getByLabel("E-Met").click();
   await page.locator("body").press("ControlOrMeta+k");
   await page.getByPlaceholder("Enter your search").fill("test");
