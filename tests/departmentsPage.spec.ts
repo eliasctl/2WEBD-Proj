@@ -6,5 +6,5 @@ test("Dispay all department", async ({ page }) => {
   await expect(page).toHaveScreenshot("departmentList.png");
   await page.getByRole("link", { name: "American Decorative Arts" }).click();
   await page.waitForTimeout(5000);
-  await expect(page).toHaveScreenshot("departmentPage.png");
+  await expect(page.locator('h1')).toContainText('Department of : American Decorative Arts');
 });

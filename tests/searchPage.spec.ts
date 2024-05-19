@@ -10,7 +10,7 @@ test("Search for a specific artwork", async ({ page }) => {
   await page.goto("http://localhost:5173/search");
   await page.waitForTimeout(5000);
   await page.getByLabel("Highlght").check();
-  await page.locator(".css-w9q2zk-Input2").click();
+  await page.locator('#department svg').click();
   await page.getByRole("option", { name: "European Sculpture and" }).click();
   await page.getByLabel("Search").click();
   await page.getByLabel("Search").fill("desk");
